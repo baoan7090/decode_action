@@ -1,22 +1,24 @@
-//Tue Dec 24 2024 10:23:27 GMT+0000 (Coordinated Universal Time)
+//Tue Dec 24 2024 10:25:27 GMT+0000 (Coordinated Universal Time)
 //Base:https://github.com/echo094/decode-js
 //Modify:https://github.com/smallfawn/decode_action
-function randf(t, n) {
-  return t + Math.random() * (n - t);
+function randf(t, e) {
+  return t + Math.random() * (e - t);
 }
-function JBEpmmHiVQt(t) {
+function yIwkrHPcFqJZqmWmbeGCtBqIgLfboUuGbViPJC(t) {
   if (t) {
-    var n = t.getBoundingClientRect(),
-      e = n.left + n.width / 2 + (Math.random() - .5) * 100,
-      r = n.top + n.height / 1.2 + (Math.random() - .5) * 100,
-      a = new PointerEvent("pointerdown", {
+    var e = t.getBoundingClientRect(),
+      n = e.left + Math.random() * e.width,
+      r = e.top + Math.random() * e.height,
+      i = Math.floor(45 * Math.random()) + 6,
+      a = Math.floor(45 * Math.random()) + 6,
+      l = new PointerEvent("pointerdown", {
         bubbles: !0,
         cancelable: !0,
-        clientX: e,
+        clientX: n,
         clientY: r,
         pointerId: Date.now(),
-        width: Math.floor(45 * Math.random()) + 3,
-        height: Math.floor(45 * Math.random()) + 3,
+        width: i,
+        height: a,
         pressure: 0,
         tiltX: 0,
         tiltY: 0,
@@ -24,24 +26,40 @@ function JBEpmmHiVQt(t) {
         isPrimary: !0,
         isTrusted: !0
       });
-    t.dispatchEvent(a);
+    t.dispatchEvent(l);
+    var l = new PointerEvent("pointerup", {
+      bubbles: !0,
+      cancelable: !0,
+      clientX: n,
+      clientY: r,
+      pointerId: Date.now(),
+      width: i,
+      height: a,
+      pressure: 0,
+      tiltX: 0,
+      tiltY: 0,
+      pointerType: "touch",
+      isPrimary: !0,
+      isTrusted: !0
+    });
+    t.dispatchEvent(l);
   }
 }
-function mPLnGlvJvrqzAR() {
+function RqYwkorIBNKjgglhfjtjAHlkB() {
   window.tapInterval && clearInterval(window.tapInterval);
-  window.tapInterval = setInterval(() => JBEpmmHiVQt(document.getElementById("ex1-layer")), randf(44.33, 66.33));
+  window.tapInterval = setInterval(() => yIwkrHPcFqJZqmWmbeGCtBqIgLfboUuGbViPJC(document.querySelector('[class^=\"user-tap-button\"]')), randf(55.33, 77.33));
 }
-function OhikfcpvNqURMokJWZZOelSNXaKdQaazwrtpyNZwxnE() {
+function AciKxBslaXznFfeHCQUybRvmcCfJtZfRRnLhtjloS() {
   if (window.tapInterval) {
     clearInterval(window.tapInterval);
     window.tapInterval = null;
   }
 }
 {
-  document.addEventListener("xBtNjQkA", t => {
-    mPLnGlvJvrqzAR();
+  document.addEventListener("UmPGisXZiyJDt", t => {
+    RqYwkorIBNKjgglhfjtjAHlkB();
   });
-  document.addEventListener("qEPWrcTRFaQetCPS", () => {
-    OhikfcpvNqURMokJWZZOelSNXaKdQaazwrtpyNZwxnE();
+  document.addEventListener("kGADXKdlszsplyMlSeFdB", () => {
+    AciKxBslaXznFfeHCQUybRvmcCfJtZfRRnLhtjloS();
   });
 }
